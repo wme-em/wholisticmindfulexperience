@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact WME Community</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/wme-logo.png" alt="WME logo" class="logo" />
+      <div class="brand-text">
+        <h1>WME Community</h1>
+        <p>Contact</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="daily.html">Daily</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="register.html" class="cta">Register</a>
+      <button id="donateBtn" class="donate">Donate</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="contact">
+      <h3>Reach out</h3>
+      <p>Collaborations, coaching, feedback, or sharing your story—WME is listening.</p>
+      <form action="https://formsubmit.co/wholisticly.em@gmail.com" method="POST" class="stack">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit" class="btn primary">Send</button>
+  </form>
+      <div id="contactStatus" class="status"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 WME Community</p>
+    <div class="social-links">
+  <a href="https://www.facebook.com/YourPage" target="_blank" aria-label="Facebook">
+    <img src="assets/facebook.svg" alt="Facebook" />
+  </a>
+
+  <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp">
+    <img src="assets/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <a href="https://www.youtube.com/@YourChannel" target="_blank" aria-label="YouTube">
+    <img src="assets/youtube.svg" alt="YouTube" />
+  </a>
+</div>
+  </footer>
+
+  <!-- Donation modal -->
+  <div id="donationModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" aria-label="Close">&times;</button>
+      <h3>Support WME</h3>
+      <p>Your donation fuels programs, content, and community access.</p>
+      <form id="donationForm">
+        <label for="donationAmount">Amount (USD)</label>
+        <input id="donationAmount" type="number" min="1" step="1" placeholder="25" required />
+        <label for="donationNote">Note (optional)</label>
+        <input id="donationNote" type="text" placeholder="Message..." />
+        <div class="pay-methods">
+          <button type="submit" class="btn primary">Donate</button>
+          <button type="button" class="btn outline" data-method="card">Pay by card</button>
+          <button type="button" class="btn outline" data-method="wallet">Pay by wallet</button>
+        </div>
+        <small>No payment processor wired yet—this records intent locally.</small>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

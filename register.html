@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join WME Community</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/wme-logo.png" alt="WME logo" class="logo" />
+      <div class="brand-text">
+        <h1>WME Community</h1>
+        <p>Membership</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="daily.html">Daily</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="active cta">Register</a>
+      <button id="donateBtn" class="donate">Donate</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="register">
+      <h3>Become a member</h3>
+      <p>Join WME and access exclusive content, community circles, and events.</p>
+      <form id="registerForm" class="stack">
+        <input id="regName" type="text" placeholder="Full name" required />
+        <input id="regEmail" type="email" placeholder="Email" required />
+        <input id="regPassword" type="password" placeholder="Create password" required />
+        <label class="check">
+          <input id="regNewsletter" type="checkbox" />
+          <span>Subscribe to weekly wellness notes</span>
+        </label>
+        <button type="submit" class="btn primary">Register</button>
+      </form>
+      <div id="registerStatus" class="status"></div>
+    </section>
+
+    <section class="members">
+      <h4>Recently joined</h4>
+      <ul id="memberList" class="member-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 WME Community</p>
+  </footer>
+
+  <!-- Donation modal -->
+  <div id="donationModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" aria-label="Close">&times;</button>
+      <h3>Support WME</h3>
+      <p>Your donation fuels programs, content, and community access.</p>
+      <form id="donationForm">
+        <label for="donationAmount">Amount (USD)</label>
+        <input id="donationAmount" type="number" min="1" step="1" placeholder="25" required />
+        <label for="donationNote">Note (optional)</label>
+        <input id="donationNote" type="text" placeholder="Message..." />
+        <div class="pay-methods">
+          <button type="submit" class="btn primary">Donate</button>
+          <button type="button" class="btn outline" data-method="card">Pay by card</button>
+          <button type="button" class="btn outline" data-method="wallet">Pay by wallet</button>
+        </div>
+        <small>No payment processor wired yet—this records intent locally.</small>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
